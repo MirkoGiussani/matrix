@@ -47,8 +47,8 @@ public class Matrix4BI {
             }
         }
 
-        for (int i = rows - 1; i >= 0; i--) {
-            for (int j = columns - 1; j >= 0; j--) {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < columns; ++j) {
                 System.out.print(a[i][j] + " ");
             }
             System.out.print("\n");
