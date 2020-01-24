@@ -20,22 +20,20 @@ public class Matrix4BI {
      */
     public static void main(String[] args) throws FileNotFoundException {
         Scanner input = new Scanner(new File("matrix.txt"));
-        // pre-read in the number of rows/columns
         int rows = 0;
         int columns = 1;
+        
         while (input.hasNextLine()) {
             columns = 1;
-            //System.out.println("in riga " + rows + " e colonna " + columns);
             ++rows;
             String riga = input.nextLine();
-            //System.out.println("COLONNA =  " + colonna);
             for (int i = 0; i < riga.length(); i++) {
                 if (riga.charAt(i) == ' ') {
-                    //System.out.println("\tFORin riga " + rows + " e colonna " + columns);
                     ++columns;
                 }
             }
         }
+        
         System.out.println("matrix has " + rows + " rows and " + columns + " columns");
         int[][] a = new int[rows][columns];
 
